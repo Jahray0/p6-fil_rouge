@@ -13,7 +13,7 @@ router.post("/", auth, multer, stuffCtrl.createThing);
 //Get 1
 router.get("/:id", auth, stuffCtrl.getOneThing);
 //MODIFICATION
-router.put("/:id", auth, stuffCtrl.modifyThing);
+router.put("/:id", auth, multer, stuffCtrl.modifyThing);
 //SUPPRESSION
 router.delete("/:id", auth, stuffCtrl.deleteThing);
 
